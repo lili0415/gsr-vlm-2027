@@ -90,10 +90,15 @@ svg { display: block; }
 .topics-grid details p { padding: 0 25px 18px 30px; font-size: 13px; color: var(--muted); }
 .topic-wide { grid-column: 1/-1; border-bottom: 1px solid var(--line); }
 
-/* Speakers and organizers use compact text entries. */
+/* Compact portraits with names and affiliations. */
 .speakers-section, .organizers-section { background: #eeeee7; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .speaker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 28px; }
-.speaker-card { border-top: 2px solid #b6bdab; padding-top: 15px; }
+.speaker-card { min-width: 0; }
+.portrait-link { display: block; width: fit-content; margin-bottom: 15px; border-radius: 50%; }
+.person-photo { display: block; width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center 30%; background: #e1e4da; border: 1px solid #d4d8ce; }
+.organizer-grid .portrait-link { display: block; margin: 0 0 14px; }
+.organizer-grid .person-photo { width: 96px; height: 96px; }
+img[alt="Tianyu Shi"] { object-position: center 20%; }
 .speaker-card h3 { font-size: 19px; letter-spacing: -.3px; }
 .affiliation { font-size: 13px; line-height: 1.6; color: var(--muted); margin-top: 7px; }
 
@@ -104,9 +109,11 @@ svg { display: block; }
 .organizer-grid a:hover { color: var(--accent); }
 .support-team { border-top: 1px solid #d5d9cc; margin-top: 30px; padding-top: 20px; display: flex; align-items: center; gap: 35px; }
 .support-team > .eyebrow { color: var(--muted); }
-.support-team p { font-size: 13px; display: flex; gap: 10px; }
-.support-team p strong { font-weight: 500; }
-.support-team p span { color: var(--muted); font-size: 12px; }
+.support-person { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.support-person .portrait-link { flex-shrink: 0; margin: 0; }
+.support-person .person-photo { width: 72px; height: 72px; }
+.support-person h3 { font-size: 16px; line-height: 1.4; }
+.support-person p { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
 /* Submission information */
 .submission-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 55px; margin-top: 26px; }
@@ -183,7 +190,7 @@ svg { display: block; }
   .speaker-grid, .organizer-grid { gap: 20px; }
   .speaker-card h3 { font-size: 18px; }
   .support-team { gap: 25px; }
-  .support-team p { flex-direction: column; gap: 2px; }
+
   .tracks-card { padding: 20px; }
 }
 @media (max-width: 850px) {
@@ -273,7 +280,10 @@ svg { display: block; }
   .organizer-grid p { font-size: 11px; }
   .organizer-grid a { margin-top: 8px; font-size: 11px; }
   .support-team { gap: 20px; }
-  .support-team p span { font-size: 11px; }
+  .support-person { flex-basis: 100%; }
+  .support-person p { font-size: 11px; }
+  .person-photo { width: 96px; height: 96px; }
+  .organizer-grid .person-photo { width: 88px; height: 88px; }
   .site-footer { gap: 18px; padding-top: 22px; padding-bottom: 22px; }
   .site-footer > p { font-size: 10px; }
 }
