@@ -92,7 +92,6 @@ svg { display: block; }
 .speakers-section, .organizers-section { background: #eeeee7; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .speaker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 28px; }
 .speaker-card { min-width: 0; }
-.person-photo.speaker-placeholder { display: grid; place-items: center; color: #89917e; margin-bottom: 15px; }
 .portrait-link { display: block; width: fit-content; margin-bottom: 15px; border-radius: 50%; }
 .person-photo { display: block; width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center 30%; background: #e1e4da; border: 1px solid #d4d8ce; }
 .organizer-grid .portrait-link { display: block; margin: 0 0 14px; }
@@ -169,6 +168,9 @@ img[alt="Tianyu Shi"] { object-position: center 20%; }
 .accent { color: var(--accent); }
 .schedule-row h3 { font-size: 16px; line-height: 1.45; }
 .schedule-row p { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.schedule-speaker { display: flex; align-items: center; gap: 12px; width: fit-content; }
+.schedule-speaker .person-photo { width: 48px; height: 48px; flex-shrink: 0; }
+.schedule-speaker:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
 .break-row { background: #eeeee7; padding-left: 12px; padding-right: 12px; }
 .site-footer { display: flex; justify-content: space-between; gap: 25px; align-items: center; padding-top: 26px; padding-bottom: 26px; }
 .footer-brand { font-size: 17px; font-weight: 600; letter-spacing: -.7px; white-space: nowrap; }
