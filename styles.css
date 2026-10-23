@@ -90,7 +90,7 @@ svg { display: block; }
 
 /* Compact portraits with names and affiliations. */
 .speakers-section, .organizers-section { background: #eeeee7; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.speaker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 28px; }
+.speaker-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 26px; margin-top: 28px; }
 .speaker-card { min-width: 0; }
 .portrait-link { display: block; width: fit-content; margin-bottom: 15px; border-radius: 50%; }
 .person-photo { display: block; width: 112px; height: 112px; border-radius: 50%; object-fit: cover; object-position: center 30%; background: #e1e4da; border: 1px solid #d4d8ce; }
@@ -188,6 +188,7 @@ img[alt="Tianyu Shi"] { object-position: center 20%; }
 
   .about-layout, .submission-layout, .challenge-layout, .program-layout { gap: 35px; }
   .speaker-grid, .organizer-grid { gap: 20px; }
+  .speaker-grid { gap: 18px; }
   .speaker-card h3 { font-size: 18px; }
   .support-team { gap: 25px; }
 
@@ -201,7 +202,8 @@ img[alt="Tianyu Shi"] { object-position: center 20%; }
   .nav-cta { margin-top: 10px; }
   .section-spacing { padding-top: 45px; padding-bottom: 45px; }
   .section-heading h2, .challenge-copy h2 { font-size: 28px; }
-  .speaker-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .speaker-grid { grid-template-columns: repeat(5, minmax(152px, 1fr)); gap: 20px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; }
+  .speaker-card { scroll-snap-align: start; }
   .affiliation br { display: none; }
   .submission-layout, .challenge-layout, .program-layout { grid-template-columns: 1fr; gap: 28px; }
   .track-panel { min-height: 135px; }
